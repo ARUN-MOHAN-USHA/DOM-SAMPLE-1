@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body id="body">
+<!-- 
+    <div id="firstTitle">I'm a div</div>
+    <a href="#" id="hello">Hello Everyone</a>
+    <a href="#" class="more">Click here</a>
+    <a href="#" class="more">More info</a>
+    <a href="#" class="more">Download</a>
+    <h3 id="hii">This is h3</h3>
+    <div class="container">Container1</div>
+    <div class="container">Container2</div>
+    <div class="container">Container3</div>
+    <div class="container-wrap">Container4</div>
+    <div class="container-wrap">Container5</div>
+    <img src="data:image/jpeg;base64,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" alt="" id="Image">
+
+    <p class="container">book</p>
+    <h2 class="container">hiii</h2> -->
+
+    <form action="#" method="post" id="contact-form" onsubmit="return validateContactForm()">
+
+        FullName <br><input type="text" name="fullName"id="fullName" placeholder="Enter full name" required>  
+        <br> 
+        <br>     
+        Password <br><input type="number" name="password" minlength="4" max="100" value="123" required>
+        <br>
+        <br>
+        Gender <br><input type="text" name="gender" value="male" required>
+        <br>
+        <br>
+        <button id="colorChange">Submit</button>
+    </form>
+    <br>
+    <a href="#" class="btn-info">Click here for more info</a>
+
+    <p id="p1">I'm paragraph 1</p>
+
+    <button onclick="changeTextColor();">change text color</button>
+
+    <button id="HideP">Hide P</button>
+    <button id="ShowP">Show P</button>
+    <br>
+    <br>
+    <P>
+    <button onclick="animateDiv()">Click Here</button>
+    </P>
+
+    <div id="Container">
+    <div id="animateDiv"></div>
+    </div>
+
+    <input type="text" id="fullNameFormField" onkeyup="getFullname();">
+
+    <script src="./script.js"></script>
+    
+</body>
+</html>

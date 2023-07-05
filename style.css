@@ -1,0 +1,36 @@
+.btn-info{
+    color: brown;
+}
+.btn-info:hover{
+    color: cornflowerblue;
+}
+form input:invalid{
+    border: solid 2px red;
+}
+form input:valid{
+    border: solid 2px rgb(0, 255, 208);
+}
+#contact-form{
+    width:78px;
+}
+
+#animateDiv{
+    width: 100px;
+    height: 100px;
+    background-color: chocolate;
+    animation-name: colourChange;
+    position: absolute;
+    animation-duration: 6s;
+    
+}
+@keyframes colourChange{
+    form{background-color: brown;}
+    to{background-color: rgb(98, 0, 255);}
+
+}
+#Container{
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background: rgb(134, 225, 144);
+}
